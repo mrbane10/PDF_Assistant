@@ -1,0 +1,9 @@
+Flask==2.2.3
+streamlit==1.24.0
+PyMuPDF
+sentence-transformers==2.2.2
+faiss-cpu==1.7.4
+torch==2.0.1
+numpy==1.24.3
+groq==0.4.1
+python-dotenv==1.0.0
