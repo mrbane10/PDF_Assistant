@@ -186,14 +186,14 @@ if prompt := st.chat_input("Ask a question about the PDF or chat..."):
                     else:
                         new_context = "No relevant information was found in the PDF for this query."
                     
-                    import textwrap
+                
                     context_to_use = new_context
                     
                     if show_debug_info and context_to_use:
                         with st.expander("📄 View Retrieved Context"):
                             st.markdown(f"```markdown\n{context_to_use}\n```")
                     
-                    enhanced_system_prompt = textwrap.dedent(f"""
+                    enhanced_system_prompt = f"""
                         {SYSTEM_PROMPT}
 
                         ---
@@ -207,24 +207,24 @@ if prompt := st.chat_input("Ask a question about the PDF or chat..."):
                         --Format any mathematical expressions, equations, or symbols clearly using LaTeX (enclose with `$...$` for inline or `$$...$$` for block equations).
                         --Integrate External Knowledge: Feel free to incorporate your broader knowledge when the PDF lacks sufficient detail or is ambiguous. Provide rich explanations and examples.
                         --Organized and Detailed Responses: Write concise, well-structured responses that break down complex ideas into easy-to-understand steps. Ensure that explanations are thorough, tailored to the user's needs, and balance technical depth with readability.
-                    """)
+                    """
                 except Exception as e:
                     st.error(f"Error retrieving context: {e}")
-                    enhanced_system_prompt = textwrap.dedent(f"""
+                    enhanced_system_prompt = f"""
                         {SYSTEM_PROMPT}
 
                         ---
                         An error occurred while retrieving information from the PDF. 
                         Please respond using your general knowledge where appropriate, and indicate that the response is not sourced from the document.
-                    """)
+                    """
             else:
-                enhanced_system_prompt = textwrap.dedent(f"""
+                enhanced_system_prompt = f"""
                     {SYSTEM_PROMPT}
 
                     ---
                     No PDF context is being used for this query.
                     Please respond using your general knowledge where appropriate.
-                """)
+                """
             
             # Build conversation history
             conversation_messages.append({
