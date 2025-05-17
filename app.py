@@ -140,7 +140,7 @@ for message in current_messages:
     if role.lower() == 'system':
         continue
     with st.chat_message(role):
-        st.markdown(content)
+        st.markdown(content,unsafe_allow_html=True)
 
 # Chat input
 if prompt := st.chat_input("Ask a question about the PDF or chat..."):
