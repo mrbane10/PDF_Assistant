@@ -119,7 +119,7 @@ use_query_rewriting = st.sidebar.checkbox("Enable query rewriting", value=True)
 show_debug_info = st.sidebar.checkbox("Show debug information", value=True)  # Changed to False by default for production
 top_k = st.sidebar.slider("Number of chunks to retrieve", min_value=1, max_value=10, value=5)
 temperature = st.sidebar.slider("Temperature", min_value=0.0, max_value=2.0, value=0.7, step=0.1)
-max_tokens = st.sidebar.slider('Max Tokens', min_value=1, max_value=32768, value=1024)
+max_tokens = st.sidebar.slider('Max Tokens', min_value=1, max_value=32768, value=8192)
 
 st.subheader(f"Current Session: {current_session_name}")
 
