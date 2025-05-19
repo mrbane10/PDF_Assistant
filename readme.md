@@ -1,6 +1,6 @@
 # PDF Assistant
 
-This application provides an interactive chat interface for asking questions about PDF documents. It uses RAG (Retrieval-Augmented Generation) to provide context-aware answers based on the content of uploaded PDFs.
+This application offers an interactive chat interface for querying large PDF documents, specifically designed for scientific and engineering textbooks. By leveraging Retrieval-Augmented Generation (RAG), it delivers accurate, context-aware answers grounded in the detailed content of the uploaded PDFs.
 
 ## Features
 
