@@ -57,7 +57,7 @@ For deployment on other cloud platforms, make sure to:
 - `config.py`: Configuration settings
 - `utils.py`: Utility functions
 - `pdf_processing.py`: PDF parsing and text chunking
-- `embedding.py`: Text embedding generation (CPU-optimized)
+- `embedding.py`: Text embedding generation (GPU-optimized)
 - `retrieval.py`: Semantic search functionality
 - `chat_utils.py`: Query rewriting for conversation context
 
