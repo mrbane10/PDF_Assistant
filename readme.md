@@ -49,7 +49,7 @@ streamlit run app.py
 For deployment on other cloud platforms, make sure to:
 1. Set the `GROQ_API_KEY` environment variable
 2. Ensure the cache directory (`./cache`) is writable
-3. Note that this application is optimized for CPU-only environments
+3. Note that this application is optimized for GPU-only environments
 
 ## Architecture
 
